@@ -1,0 +1,33 @@
+
+li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #9f8a8a;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  button {
+    padding: 5px 10px;
+    border: 1px solid #9f8a8a;
+    border-radius: 4px;
+    background-color: grey;
+    cursor: pointer;
+    align-self: center;
+  }
+  
+  button:hover {
+    background-color: #e0e0e0;
+    border: 1px solid teal;
+  }
+  
+  .icon {
+    margin-right: 5px;
+  }
+  
