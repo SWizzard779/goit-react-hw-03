@@ -1,34 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Contact.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faUser, faPhone} from '@fortawesome/free-solid-svg-icons'
 
-const Contact = ({ contact }) => {
+const Contact = ({ contact, deleteContact }) => {
+  const { id, name, number } = contact;
+
   return (
     <li className={styles.contact}>
-      <div>
-        <div>
-          <FontAwesomeIcon icon={faUser} className={styles.icon} />
-          <p>{contact.name}</p>
-        </div>
-        <div>
-          <FontAwesomeIcon icon={faPhone} className={styles.icon} />
-          <p>{contact.number}</p>
-        </div>
-      </div>
-      
-      <button>Delete</button>
+      <span>{name}:</span>
+      <span>{number}</span>
+      <button onClick={() => deleteContact(id)}>Delete</button>
     </li>
   );
 };
 
 Contact.propTypes = {
-  contact: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
-  }).isRequired,
+  contact: PropTypes.object.isRequired,
+  deleteContact: PropTypes.func.isRequired,
 };
 
 export default Contact;

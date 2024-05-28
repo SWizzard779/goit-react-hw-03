@@ -11,20 +11,25 @@ li {
   
   p {
     margin: 0;
+    
+  }
+
+  span {
+    color: rgb(37, 37, 37);
   }
   
   button {
     padding: 5px 10px;
     border: 1px solid #9f8a8a;
     border-radius: 4px;
-    background-color: grey;
+    background-color: rgb(230, 226, 226);
     cursor: pointer;
     align-self: center;
   }
   
   button:hover {
     background-color: #e0e0e0;
-    border: 1px solid teal;
+    border: 1px solid darkgray;
   }
   
   .icon {
